@@ -48,6 +48,7 @@ public class ByStatusAdapter extends RecyclerView.Adapter<ByStatusAdapter.MyHold
     public void onBindViewHolder(@NonNull MyHolder myHolder, int i) {
         if (listBeans!=null&&listBeans.size()>0){
             myHolder.numbername.setText(listBeans.get(i).getOrderId());
+
             myHolder.staRv.setAdapter(new ByShowAdapter(context,listBeans.get(i).getDetailList()));
         }
     }
